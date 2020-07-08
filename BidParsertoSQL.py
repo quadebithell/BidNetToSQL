@@ -72,7 +72,7 @@ file_selection = 0
 from html.parser import HTMLParser
 
 
-
+#in progress class that will eventually manage all global variables into a single class that controls the session
 class sessionManager:
     
     mark_bidEntry = False
@@ -578,9 +578,8 @@ def main():
   print("Parisng is complete")
 
 
-  #fileAdjustment()
     
-   
+    #outdated function which will be merged into new class file   
 def fileAdjustment():
     print(os.getcwd())
     newfilename = "output" + bidSheetDate +".txt"

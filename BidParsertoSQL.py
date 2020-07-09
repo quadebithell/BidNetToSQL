@@ -290,9 +290,8 @@ class MyHTMLParser(HTMLParser):
             if(len(data) > 250):
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 data = data[:250]
-                data = data.replace("'", "")
-                data = data.replace(":", "")
                 Title = "'" + data + "'" +", "
 
 
@@ -302,6 +301,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 Title = "'" + data + "'" +", "
                 resetCases()
                 mark_Title = False
@@ -339,6 +339,7 @@ class MyHTMLParser(HTMLParser):
                 data = data[:250]
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 DeliveryPoint = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryPoint = False
@@ -346,6 +347,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 DeliveryPoint = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryPoint = False
@@ -356,6 +358,7 @@ class MyHTMLParser(HTMLParser):
                 data = data[:250]
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 DeliveryDate = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryDate = False
@@ -363,6 +366,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 DeliveryDate = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryDate = False
@@ -373,6 +377,7 @@ class MyHTMLParser(HTMLParser):
             if len(data) >= 250:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 trunacteddata = data[:250]
                 Specifications = "'"+ trunacteddata+ "'"+", "
                 resetCases()
@@ -381,6 +386,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", '')
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 Specifications = "'"+ data+ "'"+", "
                 resetCases()
                 mark_Specifications = False
@@ -392,6 +398,7 @@ class MyHTMLParser(HTMLParser):
                 data = data[:250]
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 ProductCodes ="'"+ data +"'"+", "
                 resetCases()
                 mark_ProductCodes = False
@@ -406,6 +413,7 @@ class MyHTMLParser(HTMLParser):
             if(len(data) > 250):
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 data = data[:250]
                 IssuingAgency = "'"+ data + "'"+", "
                 resetCases()
@@ -414,6 +422,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 IssuingAgency = "'"+ data + "'"+", "
                 resetCases()
                 mark_IssuingAgency = False
@@ -421,11 +430,17 @@ class MyHTMLParser(HTMLParser):
         #11
         elif(mark_UsingAgency == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
+                data = data.replace(';', '')
                 data = data[:250]
                 UsingAgency = "'"+ data + "'"+", "
                 resetCases()
                 mark_UsingAgency = False
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
+                data = data.replace(';', '')
                 UsingAgency = "'"+ data + "'"+", "
                 resetCases()
                 mark_UsingAgency = False
@@ -454,6 +469,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')                
                 AgencyType = "'" + data + "'"+", "
                 resetCases()
                 mark_AgencyType = False
@@ -463,6 +479,7 @@ class MyHTMLParser(HTMLParser):
             if(len(data) > 250):
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')                
                 data = data[:250]
                 Contact = "'" + data + "'"+", "
                 resetCases()
@@ -470,6 +487,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')                
                 Contact = "'" + data + "'"+", "
                 resetCases()
                 mark_Contact = False
@@ -478,6 +496,7 @@ class MyHTMLParser(HTMLParser):
             if(len(data) > 250):
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 data = data[:250]
                 Phone = "'" + data + "'"+", "
                 resetCases()
@@ -485,6 +504,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 Phone = "'" + data + "'"+", "
                 resetCases()
                 mark_Phone = False
@@ -493,6 +513,7 @@ class MyHTMLParser(HTMLParser):
             if(len(data) > 250):
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 data = data[:250]
                 Fax = "'" + data + "'"+", "
                 resetCases()
@@ -500,6 +521,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 Fax = "'" + data + "'"+", "
                 resetCases()
                 mark_Fax = False
@@ -508,6 +530,7 @@ class MyHTMLParser(HTMLParser):
             if(len(data) > 250):
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 data = data[:250]
                 Email = "'" + data + "'"
                 resetCases()
@@ -515,6 +538,7 @@ class MyHTMLParser(HTMLParser):
             else:
                 data = data.replace("'", "")
                 data = data.replace(':', '')
+                data = data.replace(';', '')
                 Email = "'" + data + "'"
                 resetCases()
                 mark_Email = False
@@ -584,7 +608,7 @@ class MyHTMLParser(HTMLParser):
 
 
 
-
+            #depreciated. Remove when ready
 def main():
 
   global file_selection 

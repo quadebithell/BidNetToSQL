@@ -15,7 +15,7 @@ import interface
 
 
 
-PREFIX = "INSERT INTO 1PS_QB_BID_MASTER VALUES("
+PREFIX = "INSERT INTO PS_QB_BID_MASTER VALUES("
 SUFFIX = ");\n"
 
 
@@ -288,12 +288,20 @@ class MyHTMLParser(HTMLParser):
         #3
         elif(mark_Title == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 data = data[:250]
+                data = data.replace("'", "")
+                data = data.replace(":", "")
                 Title = "'" + data + "'" +", "
+
+
                 resetCases()
                 mark_Title = False
 
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 Title = "'" + data + "'" +", "
                 resetCases()
                 mark_Title = False
@@ -329,11 +337,15 @@ class MyHTMLParser(HTMLParser):
         elif(mark_DeliveryPoint == True and bidAlertMarker2 == True):
             if(len(data) > 250):
                 data = data[:250]
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 DeliveryPoint = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryPoint = False
 
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 DeliveryPoint = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryPoint = False
@@ -342,11 +354,15 @@ class MyHTMLParser(HTMLParser):
         elif(mark_DeliveryDate == True and bidAlertMarker2 == True):
             if(len(data) > 250):
                 data = data[:250]
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 DeliveryDate = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryDate = False
 
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 DeliveryDate = "'"+data + "'" +", "
                 resetCases()
                 mark_DeliveryDate = False
@@ -355,15 +371,16 @@ class MyHTMLParser(HTMLParser):
         elif(mark_Specifications == True and bidAlertMarker2 == True):
             print(data)
             if len(data) >= 250:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 trunacteddata = data[:250]
-                print(trunacteddata)
-                print("Specs Truncated")
                 Specifications = "'"+ trunacteddata+ "'"+", "
                 resetCases()
                 mark_Specifications = False
 
             else:
-
+                data = data.replace("'", '')
+                data = data.replace(':', '')
                 Specifications = "'"+ data+ "'"+", "
                 resetCases()
                 mark_Specifications = False
@@ -373,6 +390,8 @@ class MyHTMLParser(HTMLParser):
         elif(mark_ProductCodes == True and bidAlertMarker2 == True):
             if(len(data) > 250):
                 data = data[:250]
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 ProductCodes ="'"+ data +"'"+", "
                 resetCases()
                 mark_ProductCodes = False
@@ -385,12 +404,16 @@ class MyHTMLParser(HTMLParser):
         #10
         elif(mark_IssuingAgency == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 data = data[:250]
                 IssuingAgency = "'"+ data + "'"+", "
                 resetCases()
                 mark_IssuingAgency = False
 
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 IssuingAgency = "'"+ data + "'"+", "
                 resetCases()
                 mark_IssuingAgency = False
@@ -423,10 +446,14 @@ class MyHTMLParser(HTMLParser):
         elif(mark_AgencyType == True and bidAlertMarker2 == True):
             if(len(data) > 250):
                 data = data[:250]
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 AgencyType = "'" + data + "'"+", "
                 resetCases()
                 mark_AgencyType = False
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 AgencyType = "'" + data + "'"+", "
                 resetCases()
                 mark_AgencyType = False
@@ -434,44 +461,60 @@ class MyHTMLParser(HTMLParser):
         #14
         elif(mark_Contact == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 data = data[:250]
                 Contact = "'" + data + "'"+", "
                 resetCases()
                 mark_Contact = False
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 Contact = "'" + data + "'"+", "
                 resetCases()
                 mark_Contact = False
         #15
         elif(mark_Phone == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 data = data[:250]
                 Phone = "'" + data + "'"+", "
                 resetCases()
                 mark_Phone = False
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 Phone = "'" + data + "'"+", "
                 resetCases()
                 mark_Phone = False
         #16
         elif(mark_Fax == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 data = data[:250]
                 Fax = "'" + data + "'"+", "
                 resetCases()
                 mark_Fax = False
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 Fax = "'" + data + "'"+", "
                 resetCases()
                 mark_Fax = False
         #17
         elif(mark_Email == True and bidAlertMarker2 == True):
             if(len(data) > 250):
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 data = data[:250]
                 Email = "'" + data + "'"
                 resetCases()
                 mark_Email = False
             else:
+                data = data.replace("'", "")
+                data = data.replace(':', '')
                 Email = "'" + data + "'"
                 resetCases()
                 mark_Email = False
@@ -694,7 +737,7 @@ def startparse():
 
 
 
-begin_button = tk.Button(bottom_frame, text='Begin filepath', command =startparse)
+begin_button = tk.Button(bottom_frame, text='Begin parsing', command =startparse)
 
 top_frame.pack(side=tk.TOP)
 line.pack(pady=10)
